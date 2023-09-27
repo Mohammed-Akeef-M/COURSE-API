@@ -5,7 +5,7 @@ from rest_framework.decorators import api_view
 from .serializer  import CourseSerializer
 from rest_framework import status
 
-@api_view(['GET','POST'])
+@api_view(['GET','POST'])  # using @api_view for UI
 def courseview(request):
     if request.method=='GET':
         course=Course.objects.all()
